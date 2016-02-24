@@ -1,6 +1,6 @@
 {
   "name": "AutoCaptcha for VIT academics",
-  "version": "0.4.2",
+  "version": "0.4.1",
   "author": "Developer Owl",
   "description": "Fills in the captcha for you at VIT's Academics page (http://academics.vit.ac.in and http://academicscc.vit.ac.in)",
   "permissions": ["http://*/*","https://*/*"],
