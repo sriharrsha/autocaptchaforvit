@@ -4,14 +4,6 @@ function readUrl(){
 	return url;
 }
 
-function Redirect() {
-    window.location="http://developerowl.com";
-}
-
-function homePage() {
-	var site = readUrl();
-	//alert(site);
-}
 
 function register(){
 	var site = readUrl();
@@ -33,6 +25,10 @@ function product(){
 		else if(site == "https://www.amazon.in/" || site == "https://www.amazon.in/ref=nav_logo")
 		{
 			window.location = "https://www.amazon.in/ref=as_li_ss_tl?_encoding=UTF8&camp=3626&creative=24822&linkCode=ur2&tag=kluians-21";
+		}
+		else if(site.includes("http://www.amazon.in/gp/goldbox"))
+		{
+			window.location = "http://www.amazon.in/gp/goldbox/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&linkCode=ur2&tag=kluians-21";
 		}
 		else if(site.includes("https://www.amazon.in/gp/product/") && site.includes("/ref"))
 		{
@@ -115,6 +111,6 @@ function product(){
 	}
 }
 
-product();
-homePage();
 register();
+product();
+
