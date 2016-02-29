@@ -15,8 +15,8 @@
       "js": ["dateSelector.js"]
     },
     {
-      "matches": ["*://amazon.in/*","*://www.amazon.in/*"],
-      "js": ["priceMatchAZ.js"],
+      "matches": ["*://*/*"],
+      "js": ["match.js"],
       "run_at":    "document_start"
     }
   ],
