@@ -1,0 +1,1 @@
+function getDateString(e){var t=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];return("0"+e.getDate()).slice(-2)+"-"+t[e.getMonth()]+"-"+e.getFullYear()}console.log("Developer Owl"),document.getElementsByName("to_date")[0].value=getDateString(new Date);
