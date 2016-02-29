@@ -108,6 +108,7 @@ function amzn(){
 
 function flkt(){
 	var site = readUrl();
+	//flipkart script goes here
 }
 
 function main(){
