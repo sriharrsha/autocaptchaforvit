@@ -1,0 +1,39 @@
+#menu123{
+  width:207px;
+  height:100%;
+  background: #22313F;
+  color:white;
+}
+
+
+#menuhead{
+	font-size: 20pt;
+	color: #eee;
+}
+
+#menuhead:hover{
+	font-size: 20pt;
+	color: white;
+}
+
+.menuitem{
+	font-size: 16px;
+	color: white;
+}
+
+.menuitem:hover{
+	font-size: 22px;
+	color:white;
+	background:#34495e;
+}
+
+#menuhead, .menuitem{
+  width:207px;
+  height:40px;
+  background: #22313F;
+  padding-top: 14px;
+}
+
+input.submit3{
+	
+}

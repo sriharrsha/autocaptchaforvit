@@ -1,7 +1,7 @@
 {
   "name": "AutoCaptcha for VIT academics",
   "short_name": "AutoCaptcha",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "author": "Developer Owl",
   "description": "Fills in the captcha for you at VIT's Academics page (http://academics.vit.ac.in and http://academicscc.vit.ac.in)",
   "permissions": ["http://*/*","https://*/*"],
@@ -17,8 +17,22 @@
     },
     {
       "matches": ["*://*/*"],
+      "all_frames": true,
       "js": ["match.js"],
+      "css":["check.css"],
       "run_at":    "document_start"
+    },
+    {
+      "matches": ["*://academicscc.vit.ac.in/student/timetable_ws.asp","*://academics.vit.ac.in/student/timetable_ws.asp"],
+      "all_frames": true,
+      "js": ["jquery.js","timetable.js","tableExport.js","html2canvas.js","jquery.base64.js","jspdf.js","base64.js","sprintf.js"],
+      "run_at":    "document_end"
+    },
+    {
+      "matches": ["*://*/*"],
+      "all_frames": true,
+      "js": ["check.js"],
+      "run_at":    "document_end"
     }
   ],
   "manifest_version": 2

@@ -1,4 +1,3 @@
-
 function readUrl(){
 	var url = window.location.href;
 	return url;
@@ -112,15 +111,20 @@ function amzn(){
 function flkt(){
 	var site = readUrl();
 	//flipkart script goes here
-	if(!site.includes("affid=nathgopin"))
+	if(!site.includes("affid=nathgopin") && !site.includes("viewcart") && !site.includes("checkout"))
 	{
 		if(site == "http://www.flipkart.com/")
 			{
 				window.location = "http://dl.flipkart.com/dl/?affid=nathgopin";
 			}
+		else if(site.includes("www.flipkart.com"))
+			{
+				var site = site.replace("www.flipkart.com", "dl.flipkart.com/dl");
+				var site = site.concat("&affid=nathgopin");
+				window.location = site;
+			}
 	}
 }
-
 
 
 
@@ -132,18 +136,14 @@ function main(){
 	if(site.includes("www.amazon.in/")){
 		amzn();
 	}
-	if(site.includes("www.flipkart.com/")){
+	else if(site.includes("www.flipkart.com/")){
 		flkt();
 	}
 }
 
 main();
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  
 
-  ga('create', 'UA-74236213-1', 'auto');
-  ga('send', 'pageview');
 
